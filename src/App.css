@@ -1,5 +1,15 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
 .App {
   text-align: center;
+  display: grid;
 }
 
 .App-logo {
@@ -38,25 +48,11 @@
 }
 
 
-.header_nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
 
-.header_nav_lista {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0;
-}
 .header_nav_lista li {
+display: inline-block;
   padding: 0px;
+  flex-direction: row;
 }
 
 .header_nav_lista {
@@ -67,6 +63,11 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   list-style: none;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
 }
 
 
@@ -90,9 +91,21 @@
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.nav h3{
+display: inline-block;
+}
+
 .btn-warning{
 color: #000;
 background-color: #ffc107 !important;
 border-color: #ffc107 !important;
 }
 
+.Container-img{
+  display: inline-block;
+}
+.img{
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
