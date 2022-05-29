@@ -2,17 +2,19 @@
 import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter/Counter.js';
-import Button from './components/Button/Button.js';
-
+import Navbar from './components/NavBar/Navbar.js';
+import ItemListContainer from './components/itemListContainer/itemListContainer'
 function App(){
-  const valor = 1234
+  
 
-
-  const increment =()=>{
-    console.log('sumar');
-  }
   return (
     <div className="App" >
+      
+
+ 
+      <Navbar/>
+
+      <ItemListContainer greeting='Bienvenidos'/>
   {/* <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -26,9 +28,8 @@ function App(){
         <button onClick={() => console.log('nice click') }> Mostrasr un mensaje en consola</button>
 
       </header>*/}
-    <Counter initial={10} tittle='Contador' handleIncrement={increment}/>
-    </div>
 
+    </div>
   );
 }
 
