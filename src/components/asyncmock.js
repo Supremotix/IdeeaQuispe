@@ -6,7 +6,7 @@ const products = [
         category: 'laptop',
         stock: 30,
         description: 'Laptop diseñada para escolares',
-        img:'/images/equipo1.jpg', 
+        img: '/images/equipo1.jpg',
     },
     {
         id: '2',
@@ -15,7 +15,7 @@ const products = [
         category: 'laptop',
         stock: 30,
         description: 'Laptop diseñada para escolares',
-        img:'/images/equipo2.jpg', 
+        img: '/images/equipo2.jpg',
     },
     {
         id: '3',
@@ -24,7 +24,7 @@ const products = [
         category: 'Mouse',
         stock: 30,
         description: 'Laptop diseñada para escolares',
-        img:'/images/equipo1.jpg', 
+        img: '/images/equipo6.jpg',
     },
     {
         id: '4',
@@ -33,7 +33,7 @@ const products = [
         category: 'Mouse',
         stock: 30,
         description: 'Laptop diseñada para escolares',
-        img:'/images/equipo4.jpg', 
+        img: '/images/equipo4.jpg',
     },
     {
         id: '5',
@@ -42,7 +42,7 @@ const products = [
         category: 'Audifonos',
         stock: 30,
         description: 'Laptop diseñada para escolares',
-        img:'/images/equipo1.jpg', 
+        img: '/images/equipo1.jpg',
     },
     {
         id: '6',
@@ -51,7 +51,7 @@ const products = [
         category: 'laptop',
         stock: 30,
         description: 'Laptop diseñada para escolares',
-        img:'/images/equipo6.jpg', 
+        img: '/images/equipo6.jpg',
     },
     {
         id: '7',
@@ -60,7 +60,7 @@ const products = [
         category: 'Teclado',
         stock: 30,
         description: 'Laptop diseñada para escolares',
-        img:'/images/tecladohyperx.jpg', 
+        img: '/images/tecladohyperx.jpg',
     },
 
 
@@ -70,6 +70,14 @@ export const getProducts = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(products)
-        }, 2000)
+        }, 500)
+    })
+}
+
+export const getProductById = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === id))
+        }, 500)
     })
 }
