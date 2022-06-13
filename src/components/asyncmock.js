@@ -3,7 +3,7 @@ const products = [
         id: '1',
         name: 'Tarjeta de Video Gigabyte',
         price: 2500,
-        category: 'laptop',
+        category: 'tarjeta',
         stock: 30,
         description: 'Laptop diseñada para escolares',
         img: '/images/equipo1.jpg',
@@ -12,7 +12,7 @@ const products = [
         id: '2',
         name: 'Tarjeta de Video asus',
         price: 3000,
-        category: 'laptop',
+        category: 'tarjeta',
         stock: 30,
         description: 'Laptop diseñada para escolares',
         img: '/images/equipo2.jpg',
@@ -21,16 +21,16 @@ const products = [
         id: '3',
         name: 'Mouse G502 Logitech',
         price: 250,
-        category: 'Mouse',
+        category: 'mouse',
         stock: 30,
         description: 'Laptop diseñada para escolares',
-        img: '/images/equipo6.jpg',
+        img: '/images/g305.webp',
     },
     {
         id: '4',
         name: 'Mouse Logitech',
         price: 2500,
-        category: 'Mouse',
+        category: 'mouse',
         stock: 30,
         description: 'Laptop diseñada para escolares',
         img: '/images/equipo4.jpg',
@@ -39,16 +39,16 @@ const products = [
         id: '5',
         name: 'Audifonos Hyperx',
         price: 280,
-        category: 'Audifonos',
+        category: 'audifonos',
         stock: 30,
         description: 'Laptop diseñada para escolares',
-        img: '/images/equipo1.jpg',
+        img: '/images/equipo5.jpg',
     },
     {
         id: '6',
         name: 'Procesador ryzen',
         price: 2500,
-        category: 'laptop',
+        category: 'procesador',
         stock: 30,
         description: 'Laptop diseñada para escolares',
         img: '/images/equipo6.jpg',
@@ -57,7 +57,7 @@ const products = [
         id: '7',
         name: 'Teclado HyperX Alloy FPS Pro',
         price: 700,
-        category: 'Teclado',
+        category: 'teclado',
         stock: 30,
         description: 'Laptop diseñada para escolares',
         img: '/images/tecladohyperx.jpg',
@@ -74,6 +74,13 @@ export const getProducts = () => {
     })
 }
 
+export const getProductsByCategory = (categoryId) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.category === categoryId))
+         }, 500)
+    })
+}
 export const getProductById = (id) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {

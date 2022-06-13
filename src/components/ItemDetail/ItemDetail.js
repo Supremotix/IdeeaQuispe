@@ -11,6 +11,4 @@ const ItemDetail = ({ id, name, price, img }) => {
         </>
     )
 }
-
 export default ItemDetail
-

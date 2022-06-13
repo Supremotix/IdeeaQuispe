@@ -1,27 +1,23 @@
 import CartWidget from "../CartWidget/CartWiddget"
-
+import { Link,NavLink } from 'react-router-dom'
 const Navbar = () => {
     return (
         <nav className="header_nav">
             <div className='nav'>
-                <h3>Importaciones</h3>
+                <Link to={`/`}>
+                    <h3>Importaciones</h3>
+                </Link>
                 <CartWidget />
             </div>
-
             <ul className="header_nav_lista">
-                <li><a className="btn2 btn-warning">laptops</a></li>
-                <li><a className="btn2 btn-warning">CPU</a></li>
-                <li><a className="btn2 btn-warning">Monitores</a></li>
-                <li><a className="btn2 btn-warning">Tarjeta Grafica</a></li>
-                <li><a className="btn2 btn-warning">Placa madre</a></li>
-                <li><a className="btn2 btn-warning">Perifericos</a></li>
-                <li><a className="btn2 btn-warning">Perifericos</a></li>
-                <li><a className="btn2 btn-warning">Perifericos</a></li>
-            </ul>
-
+               <Link to='/category/tarjeta' className="btn2 btn-warning">Tarjeta de video</Link>
+                <Link to='/category/audifonos' className="btn2 btn-warning">Audifonos Gamer</Link>
+                <Link to='/category/Placamadre' className="btn2 btn-warning">Placa madre</Link>
+                <Link to='/category/teclado' className="btn2 btn-warning">Teclado</Link>
+                <Link to='/category/Silla' className="btn2 btn-warning">Silla gamer</Link>
+                <Link to='/category/mouse' className="btn2 btn-warning">Mouse</Link>
+</ul>
         </nav>
-
     )
 }
-
 export default Navbar
