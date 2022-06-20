@@ -35,7 +35,6 @@ const MercadoLibre = () => {
                             <p>{prod.title}</p>
                             <p>{prod.price}</p>
                             <p>{prod.currency_id}</p>
-
                         </li>
                     )
                 })}

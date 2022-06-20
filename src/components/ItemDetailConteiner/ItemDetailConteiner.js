@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 import { getProductById } from "../asyncmock"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
+
 
 const ItemDteailConteiner = () => {
 
@@ -10,6 +11,8 @@ const ItemDteailConteiner = () => {
     const { productId } = useParams()
 
     useEffect(() => {
+
+
         getProductById(productId).then(response => {
             setProduct(response)
         })
