@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import CartContext from '../Context/CartContext'
 import { Link } from 'react-router-dom'
+import NotificactionContext from '../Notification/Notification'
 
 const InputCount = ({ onAdd, stock, initial = 0, }) => {
 
@@ -48,8 +49,10 @@ const ItemDetail = ({ id, name, price, img, stock }) => {
     //      const input = inputType === 'button' ? 'input' : 'button'
     //      SetInputType(input)
     //  }
+    const setNotification = useContext(NotificactionContext)
 
     const handleOnAdd = (quantity) => {
+        setNotification('success',`Se agregaron ${quantity} ${name}`);
         console.log(`Se agregaron ${quantity} ${name}`);
         addItem({ id, name, price, quantity })
         setQuantityAdded(quantity)
@@ -69,7 +72,7 @@ const ItemDetail = ({ id, name, price, img, stock }) => {
                     <InputCount onAdd={handleOnAdd} stock={stock} />
                 } */}
                 <footer className='ItemFooter'>
-                    {quantityAdded === 0  ? <ItemCount stock={stock} onAdd={handleOnAdd} />
+                    {quantityAdded === 0 ? <ItemCount stock={stock} onAdd={handleOnAdd} />
                         : <Link to='/cart'>Terminar compra</Link>
                     }
                 </footer>

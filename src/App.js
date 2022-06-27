@@ -13,6 +13,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDteailConteiner from './components/ItemDetailConteiner/ItemDetailConteiner';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './components/Context/CartContext';
+import { NotificationProvider } from './components/Notification/Notification';
 
 function App() {
 
@@ -22,9 +23,9 @@ function App() {
   // const [page, setPage] = useState('list')
   return (
     <div className="App" >
-
-      <CartProvider>
-        {/*
+      <NotificationProvider>
+        <CartProvider>
+          {/*
       <MercadoLibre />
        <Navbar />
 
@@ -36,7 +37,7 @@ function App() {
       {page === 'list' && <ItemListContainer greeting='Bienvenidos' />}
 
       {page === 'detail' && <ItemListContainer greeting='Bienvenidos' />}*/}
-        {/* <header className="App-header">
+          {/* <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -49,18 +50,20 @@ function App() {
         <button onClick={() => console.log('nice click') }> Mostrasr un mensaje en consola</button>
 
       </header>*/}
-        {/* <Counter initial={10} stock={15} title='Contador'  />*/}
-        {/*{React.createElement(Counter,{initial:25, title: 'Contenedor 2'})}*/}
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<ItemListContainer greeting='Hola Coders' />} />
-            <Route path='/category/:categoryId' element={<ItemListContainer />} />
-            <Route path='/detail/:productId' element={<ItemDteailConteiner />} />
-            <Route path='/cart' element={<h1> Cart </h1>} />
-          </Routes>
-        </BrowserRouter>
-      </CartProvider>
+          {/* <Counter initial={10} stock={15} title='Contador'  />*/}
+          {/*{React.createElement(Counter,{initial:25, title: 'Contenedor 2'})}*/}
+          <BrowserRouter>
+
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<ItemListContainer greeting='Hola Coders' />} />
+              <Route path='/category/:categoryId' element={<ItemListContainer />} />
+              <Route path='/detail/:productId' element={<ItemDteailConteiner />} />
+              <Route path='/cart' element={<h1> Cart </h1>} />
+            </Routes>
+          </BrowserRouter>
+        </CartProvider>
+      </NotificationProvider>
     </div>
   );
 }
