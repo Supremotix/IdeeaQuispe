@@ -10,6 +10,7 @@ import './App.css';
 import Navbar from './components/NavBar/Navbar.js';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 //import MercadoLibre from './components/MercadoLibre/MercadoLibre';
+import Cart from './cart/cart';
 import ItemDteailConteiner from './components/ItemDetailConteiner/ItemDetailConteiner';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './components/Context/CartContext';
@@ -59,7 +60,7 @@ function App() {
               <Route path='/' element={<ItemListContainer greeting='Hola Coders' />} />
               <Route path='/category/:categoryId' element={<ItemListContainer />} />
               <Route path='/detail/:productId' element={<ItemDteailConteiner />} />
-              <Route path='/cart' element={<h1> Cart </h1>} />
+              <Route path='/cart' element={<Cart/>} />
             </Routes>
           </BrowserRouter>
         </CartProvider>
