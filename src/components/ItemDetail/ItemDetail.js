@@ -64,6 +64,7 @@ const ItemDetail = ({ id, name, price, img, stock }) => {
             <h2>Card de detalle</h2>
             <div>
                 <img className="pictures" src={img} alt={name} />
+                <div>
                 <p>{name}</p>
                 <p>$/.{price}.00</p>
                 {/* <button onClick={changeCount}>Cambiar Contador</button>*/}
@@ -76,6 +77,7 @@ const ItemDetail = ({ id, name, price, img, stock }) => {
                         : <Link to='/cart'>Terminar compra</Link>
                     }
                 </footer>
+                </div>
             </div>
         </>
     )

@@ -27,6 +27,7 @@ const MercadoLibre = () => {
                 <input type='text' value={input} onChange={(e) => setInput(e.target.value)} />
                 <button type='submit'>Buscar</button>
             </form>
+            
             <ul>
                 {products.map(prod => {
                     return (
