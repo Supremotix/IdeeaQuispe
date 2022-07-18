@@ -1,5 +1,7 @@
 .Success {
-    background-color: green;
+    position: absolute;
+top: 50px;
+    background-color: yellow;
 }
 
 .Error {

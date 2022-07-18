@@ -94,6 +94,13 @@
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+a{
+  text-decoration: none;
+}
+.btn2::before{
+  color: black !important;
+}
+
 .nav h3 {
   display: inline-block;
 }
